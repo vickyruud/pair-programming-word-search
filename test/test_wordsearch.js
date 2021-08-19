@@ -35,4 +35,35 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+  it("should return true if the word is present", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['L', 'D', 'F', 'G', 'T', 'V', 'R', 'G'],
+      ['I', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['G', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['H', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['T', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'LIGHT')
+
+    assert.isTrue(result);
+  });
+  it("should return false if the word is undefined", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['L', 'D', 'F', 'G', 'T', 'V', 'R', 'G'],
+      ['I', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['G', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['H', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['T', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], )
+    
+
+    assert.isFalse(result);
+  });
 });
